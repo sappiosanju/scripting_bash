@@ -1,0 +1,95 @@
+ =========================
+ 6th January 2021 - Day 1
+ =========================
+ ******************************
+ Module - Introduction to Bash
+ ******************************
+
+ History of Bash
+ Core Concepts -- Different bash files, Variable types, Command Substitution, Special Operators, Read, Shell Expansion, Arrays
+ Conditional Statements -- if, if/then/else, for loop, while loop, case
+ I/O Operations -- Reading files, file descriptors, traps
+ Debugging and Error Handling
+ Functions
+ Using the dialog
+
+ History of Bash
+=================
+ What is a SHELL?
+ Command line interpreters 
+
+  Operating System   			|		SHELL
+   DOS		     			|		Command.com
+   Windows 3.1/Windows NT		|		Program Manager	
+   Windows 95/98/ME/NT4/2000/XP/7	|		Windows Explorer
+
+  IN 1971 first UNIX shell called as V6 shell by Ken thompson from Bell labs
+
+  SHELL as a simple program that executes from outside of the kernel 
+  
+  strace and ltrace
+  TLB (Transaction Lookaside Buffer) -- Hardware componenet present inside the CPU 
+
+  2^operating system bit == address spaces 
+  address space is used to get the mapping between the physical location to the virtual address in RAM 
+
+  In 1977, the Bourne Shell was introduced by Stephen Bourne 
+
+  The Bourne shell was designed to support interactive execution of commands for the operating system 
+  Birth of scripting 
+
+  Ksh zsh csh 
+
+  BASH (the Bourne Again SHell)
+  ------------------------------
+  open source GNU project 
+  * objective -- replace th Bourne SHELL
+  * Developed by Brian Fox 
+  * Standardize the SHELL environment 
+  * Incorporate all functionalities from other shells like csh, ksh, zsh, etc
+  * Added functionalities like defining functions, usage of regular expressions, working with associative arrays 
+  * Released under GPL 
+
+  UNIX SHELL (/bin/sh) 
+ 
+  Core Concepts
+  ===============
+  Objective
+  * Core bash configuration files
+  * Bash environment & Bash environment variables
+  * File as a bash script
+  * Exit status 
+  * pipes and redirections
+
+
+  Core bash configuration files
+  ==============================
+  System-wide configuration -- /etc/profile, /etc/bashrc 
+
+  User-specific configuration -- ~/.bashrc, ~/.bash_profile, ~/.bash_history, ~/.bash_logout
+
+
+  ~/.bash_profile 
+  ---------------
+  Purpose -- is designed to work only when we login and helps us to configure the shell environment 
+
+  Whenever user is connected using the network services, then the ~/.bash_profile and ~/.bashrc and preference will be given to ~/.bashrc file settings (runtime configuration)
+  Whenever user is connected to the terminal directly, then ~/.bash_profile is read and if ~/.bashrc 
+  
+   ~/.bashrc
+   ----------
+   Purpose -- to serve runtime configurations 
+
+   ~/.bash_history
+   -----------------
+   Purpose -- to store the locally executing command history 
+   
+   HISTCONTROL=ignoredups:ignorespace
+   HISTSIZE
+   HISTFILE
+
+   ~/.bash_logout
+   ---------------
+   Purpose -- to define the house keeping tasks 
+   
+   export PS1="\[\e[32;40m\]\u\[\e[m\] \[\e[40m\]\w\[\e[m\] \A \[\e[32m\]#\[\e[m\] "

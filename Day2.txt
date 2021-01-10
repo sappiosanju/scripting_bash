@@ -1,0 +1,61 @@
+================================================
+||     10th January 2021 - Day 2	      ||
+================================================
+Objectives:
+-----------
+* Create a shell script
+* Use Environment variables
+* Using Variables
+* Set and using system defined variables
+* Comments Types and Structures
+* Command substitution
+* Exit status
+
+Create a shell script
+======================
+* Make sure the script file has the execute permission bit set
+* Do not require any extension
+* Place the script on the appropriate executable PATH by defining the $PATH variable in ~/.bash_profile
+* Follow the general standard by defining the SHEBANG and the interpreter information at the top. Followed by the Purpose, Created On, Maintained By informations
+
+#!/bin/bash
+# Purpose: Simple Script demo
+# Created on: 10th Jan 2021
+# Maintained by: Administrator
+clear
+echo "Hello World!!"
+
+where #!  is known as SHEBANG
+      and /bin/bash -- command interpreter
+
+Running a script from vi environment is possible (but the file should be saved once)
+:!<command>
+
+Use Environment variables
+============================
+env or printenv -- global variables
+set -- local variable to a shell
+
+printenv has come from UNIX shell
+
+Using Variables
+==================
+* Variables can be defined in lowercase or uppercase
+* variable=value is the normal format without any space before and after = sign
+* The variable is referred as $variable or ${variable}
+* we can use the export command to export a variable with a static value
+
+The script will run a separate subshell in which the variables are local 
+
+Set and using system defined variables
+========================================
+Variable=VALUE
+echo "My home directory is: $HOME"
+
+Comments Types and Structures
+================================
+* Comments will always begins with a "#" symbol
+* we dont have any grouping comments option
+
+
+

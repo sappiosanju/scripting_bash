@@ -57,5 +57,4 @@ Comments Types and Structures
 * Comments will always begins with a "#" symbol
 * we dont have any grouping comments option
 
-
-
+Note: The continuation of a line in configuration file is achieved with \ symbol at the end and the next line begins with a space. 
